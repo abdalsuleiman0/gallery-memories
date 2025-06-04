@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIT A Gallery | Class of 2025</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-binance-black text-binance-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-binance-dark-gray shadow-lg z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <i class="fas fa-camera text-binance-yellow text-2xl mr-2"></i>
+          <h1 class="text-xl font-bold text-binance-yellow">Memories</h1>
+        </div>
+
+        <!-- <div class="hidden md:flex space-x-6">
+          <a
+            href="#"
+            class="text-binance-white hover:text-binance-yellow transition"
+            >Explore</a
+          >
+          <a
+            href="#"
+            class="text-binance-white hover:text-binance-yellow transition"
+            >Collections</a
+          >
+          <a
+            href="#"
+            class="text-binance-white hover:text-binance-yellow transition"
+            >Community</a
+          >
+          <a
+            href="#"
+            class="text-binance-white hover:text-binance-yellow transition"
+            >Pricing</a
+          >
+        </div> -->
+
+        <!-- <div class="flex space-x-3">
+          <button
+            class="px-4 py-2 border border-binance-light-gray rounded text-binance-white hover:border-binance-yellow hover:text-binance-yellow transition"
+          >
+            Login
+          </button>
+          <button
+            class="px-4 py-2 bg-binance-yellow text-binance-black rounded font-semibold hover:bg-yellow-600 transition"
+          >
+            Sign Up
+          </button>
+        </div> -->
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative h-96 flex items-center justify-center bg-binance-gray bg-opacity-50 bg-blend-multiply"
+        style="
+          background-image: url('./assets/images/whole.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="text-center px-4">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Stunning memory images
+          </h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            BIT A | Class of 2025 | Comprehensive and Defense Day | SUN, June
+            01, 2025 <br />
+            Every picture is a heartbeat of the past — captured, cherished, and
+            eternal.
+          </p>
+
+          <div class="relative max-w-2xl mx-auto">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search for an eternal memories..."
+              class="w-full py-4 px-6 rounded-l bg-binance-dark-gray text-binance-white focus:outline-none focus:ring-2 focus:ring-binance-yellow"
+            />
+            <button
+              id="searchBtn"
+              class="absolute right-0 top-0 h-full px-6 bg-binance-yellow text-binance-black font-semibold rounded-r hover:bg-yellow-600 transition"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filters -->
+      <section class="container mx-auto px-4 py-8">
+        <div class="flex flex-wrap items-center justify-between mb-6">
+          <h3 class="text-2xl font-semibold mb-4 md:mb-0">Popular Images</h3>
+
+          <div class="flex space-x-2 overflow-x-auto pb-2">
+            <button
+              class="filter-btn px-4 py-2 rounded-full bg-binance-yellow text-binance-black font-medium"
+              data-category="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-full bg-binance-dark-gray hover:bg-binance-gray transition"
+              data-category="single"
+            >
+              Single
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-full bg-binance-dark-gray hover:bg-binance-gray transition"
+              data-category="group"
+            >
+              Group
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-full bg-binance-dark-gray hover:bg-binance-gray transition"
+              data-category="man"
+            >
+              Man
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-full bg-binance-dark-gray hover:bg-binance-gray transition"
+              data-category="woman"
+            >
+              Woman
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-full bg-binance-dark-gray hover:bg-binance-gray transition"
+              data-category="otherclass"
+            >
+              Other Memo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="container mx-auto px-4 pb-12">
+        <div
+          id="galleryGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          <!-- Images will be loaded here from JSON -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-binance-dark-gray py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h4 class="text-binance-yellow text-lg font-semibold mb-4">
+              Gallery Memories
+            </h4>
+            <p class="text-binance-white opacity-70">
+              These pics were taken at the day of Comprehensive and defense day.
+              Bachelor of Information Technology | Class A| SUN, June 01st, 2025
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-binance-gray pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-binance-white opacity-70 mb-4 md:mb-0">
+            © 2025 Gallery Memories. All rights reserved.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="https://github.com/abdalsuleiman0"
+              class="text-binance-white opacity-70 hover:opacity-100 hover:text-binance-yellow transition"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
